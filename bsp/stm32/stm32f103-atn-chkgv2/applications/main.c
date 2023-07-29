@@ -19,6 +19,7 @@
 int main(void)
 {
     fal_init();
+    easyflash_init();
     /* set LED0 pin mode to output */
     rt_pin_mode(LED0_PIN, PIN_MODE_OUTPUT);
 
