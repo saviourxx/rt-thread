@@ -94,7 +94,6 @@
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
 #define RT_USING_RTC
-#define RT_USING_SOFT_RTC
 #define RT_USING_SPI
 #define RT_USING_SFUD
 #define RT_SFUD_USING_SFDP
@@ -289,6 +288,8 @@
 #define BSP_USING_ON_CHIP_FLASH
 #define BSP_USING_SPI
 #define BSP_USING_SPI1
+#define BSP_USING_ONCHIP_RTC
+#define BSP_RTC_USING_LSI
 
 /* Board extended module Drivers */
 
