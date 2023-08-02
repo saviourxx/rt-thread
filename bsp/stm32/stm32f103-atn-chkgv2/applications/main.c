@@ -8,17 +8,15 @@
  * 2018-11-5      SummerGift   first version
  */
 
-#include <rtthread.h>
-#include <rtdevice.h>
-#include <board.h>
-
 #define DBG_TAG "main"
 #define DBG_LVL DBG_LOG
 #include <rtdbg.h>
 
-#include "fal.h"
-#include "easyflash.h"
-#include "usr_ef.h"
+#include <rtthread.h>
+#include <rtdevice.h>
+#include <board.h>
+
+#include "usr_init.h"
 
 #define APP_VERSION "2.0.0"
 
@@ -27,19 +25,10 @@
 
 int main(void)
 {
-    fal_init();
-    // easyflash_init();
-    user_easy_flash();
+    usr_init();
 
     LOG_D("The current version of App fireware: %s",APP_VERSION);
 
-    uint8_t data[3] ={1,2,3};
-    LOG_E("error");
-    LOG_W("waring");
-    LOG_I("info");
-    LOG_D("debug");
-    LOG_RAW("unformatted\n");
-    ulog_hexdump("main", 8, data, sizeof(data)); //m
     /* set LED0 pin mode to output */
     rt_pin_mode(LED0_PIN, PIN_MODE_OUTPUT);
 

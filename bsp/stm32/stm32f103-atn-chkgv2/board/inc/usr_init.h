@@ -8,8 +8,8 @@
  * 2018-11-06     balanceTWK   first version
  */
 
-#ifndef __USR_EF_H__
-#define __USR_EF_H__
+#ifndef __USR_INIT_H__
+#define __USR_INIT_H__
 
 #include <rtthread.h>
 #include "drv_common.h"
@@ -19,10 +19,10 @@
 extern "C" {
 #endif
 
-extern int user_easy_flash(void);
+extern void usr_init();
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __USR_EF_H__ */
+#endif /* __USR_INIT_H__ */
