@@ -122,6 +122,7 @@
 
 /* Utilities */
 
+#define RT_USING_RYM
 #define RT_USING_ULOG
 #define ULOG_OUTPUT_LVL_D
 #define ULOG_OUTPUT_LVL 7
@@ -155,6 +156,10 @@
 
 /* IoT Cloud */
 
+#define PKG_USING_OTA_DOWNLOADER
+#define OTA_DOWNLOADER_DEBUG
+#define PKG_USING_YMODEM_OTA
+#define PKG_USING_OTA_DOWNLOADER_LATEST_VERSION
 
 /* security packages */
 

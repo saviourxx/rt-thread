@@ -11,12 +11,16 @@
 #include <rtthread.h>
 #include <rtdevice.h>
 #include <board.h>
-#include "fal.h"
-#include "easyflash.h"
 
 #define DBG_TAG "main"
 #define DBG_LVL DBG_LOG
 #include <rtdbg.h>
+
+#include "fal.h"
+#include "easyflash.h"
+#include "usr_ef.h"
+
+#define APP_VERSION "2.0.0"
 
 /* defined the LED0 pin: PF7 */
 #define LED0_PIN    GET_PIN(C, 13)
@@ -24,8 +28,11 @@
 int main(void)
 {
     fal_init();
-    easyflash_init();
-    LOG_D("Hello world!");
+    // easyflash_init();
+    user_easy_flash();
+
+    LOG_D("The current version of App fireware: %s",APP_VERSION);
+
     uint8_t data[3] ={1,2,3};
     LOG_E("error");
     LOG_W("waring");
