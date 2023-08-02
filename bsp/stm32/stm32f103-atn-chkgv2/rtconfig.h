@@ -115,6 +115,7 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_PWM
 #define RT_USING_RTC
 #define RT_USING_SPI
 #define RT_USING_SFUD
@@ -306,6 +307,7 @@
 
 #define BSP_USING_USB_TO_USART
 #define BSP_USING_SPI_FLASH
+#define BSP_USING_FAN
 
 /* On-chip Peripheral Drivers */
 
@@ -315,6 +317,9 @@
 #define BSP_USING_ON_CHIP_FLASH
 #define BSP_USING_SPI
 #define BSP_USING_SPI1
+#define BSP_USING_PWM
+#define BSP_USING_PWM3
+#define BSP_USING_PWM3_CH1
 #define BSP_USING_ONCHIP_RTC
 #define BSP_RTC_USING_LSI
 

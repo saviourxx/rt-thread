@@ -44,6 +44,14 @@ menu "Onboard Peripheral Drivers"
         select BSP_USING_PWM3_CH3
         select BSP_USING_PWM3_CH4
         default n
+    
+    config BSP_USING_FAN
+        bool "Enable PWM FAN (timer3 channel1)"
+        select RT_USING_PWM
+        select BSP_USING_PWM
+        select BSP_USING_PWM3
+        select BSP_USING_PWM3_CH1
+        default n
 
     config BSP_USING_POT
         bool "Enable potentiometer"
@@ -235,6 +243,10 @@ menu "On-chip Peripheral Drivers"
             bool "Enable timer3 output PWM"
             default n
             if BSP_USING_PWM3
+                config BSP_USING_PWM3_CH1
+                    bool "Enable PWM3 channel1"
+                    default n
+
                 config BSP_USING_PWM3_CH2
                     bool "Enable PWM3 channel2"
                     default n
