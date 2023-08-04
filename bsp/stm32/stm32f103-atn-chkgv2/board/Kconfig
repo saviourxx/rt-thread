@@ -20,6 +20,12 @@ menu "Onboard Peripheral Drivers"
         select BSP_USING_UART2
         default n
 
+    config BSP_USING_AT_CAT1
+        bool "Enable AT component for cat1 (uart3)"
+        select BSP_USING_UART
+        select BSP_USING_UART3
+        default n
+
     config BSP_USING_SPI_FLASH
         bool "Enable SPI FLASH (W25Q16 spi1)"
         select BSP_USING_SPI

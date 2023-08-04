@@ -82,6 +82,10 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define SPI1_CS_Pin GPIO_PIN_4
 #define SPI1_CS_GPIO_Port GPIOA
+#define CAT1_PWRKEY_Pin GPIO_PIN_7
+#define CAT1_PWRKEY_GPIO_Port GPIOC
+#define CAT1_PWREN_Pin GPIO_PIN_8
+#define CAT1_PWREN_GPIO_Port GPIOC
 #define FAN_PWREN_Pin GPIO_PIN_8
 #define FAN_PWREN_GPIO_Port GPIOB
 

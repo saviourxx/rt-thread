@@ -306,6 +306,7 @@
 /* Onboard Peripheral Drivers */
 
 #define BSP_USING_USB_TO_USART
+#define BSP_USING_AT_CAT1
 #define BSP_USING_SPI_FLASH
 #define BSP_USING_FAN
 
@@ -314,6 +315,7 @@
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_UART1
+#define BSP_USING_UART3
 #define BSP_USING_ON_CHIP_FLASH
 #define BSP_USING_SPI
 #define BSP_USING_SPI1
