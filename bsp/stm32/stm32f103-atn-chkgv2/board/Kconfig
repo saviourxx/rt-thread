@@ -20,11 +20,40 @@ menu "Onboard Peripheral Drivers"
         select BSP_USING_UART2
         default n
 
-    config BSP_USING_AT_CAT1
+    menuconfig BSP_USING_AT_CAT1
         bool "Enable AT component for cat1 (uart3)"
+        default n
         select BSP_USING_UART
         select BSP_USING_UART3
-        default n
+        if BSP_USING_AT_CAT1 && AT_DEVICE_USING_EC200X
+            config EC200X_CLIENT_NAME
+                string "AT client device name"
+                default "uart3"
+            config EC200X_POWER_PIN
+                int "power pin number"
+                range -1 175
+                default -1
+            config EC200X_STATUS_PIN
+                int "power status pin number"
+                range -1 175
+                default -1
+            config EC200X_WAKEUP_PIN
+                int "wakeup pin number"
+                range -1 175
+                default -1
+            config EC200X_RECV_BUFF_LEN
+                int "The maximum length of receive line buffer"
+                range 64 2048
+                default 512
+            config EC200X_PWREN_PIN
+                int "pwren pin number"
+                range -1 175
+                default -1
+            config EC200X_PWRKEY_PIN
+                int "pwrkey pin number"
+                range -1 175
+                default -1
+        endif
 
     config BSP_USING_SPI_FLASH
         bool "Enable SPI FLASH (W25Q16 spi1)"

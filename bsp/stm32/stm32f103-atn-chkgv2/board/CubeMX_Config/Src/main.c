@@ -380,19 +380,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(SPI1_CS_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : CAT1_PWRKEY_Pin */
-  GPIO_InitStruct.Pin = CAT1_PWRKEY_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(CAT1_PWRKEY_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : CAT1_PWREN_Pin */
-  GPIO_InitStruct.Pin = CAT1_PWREN_Pin;
+  /*Configure GPIO pins : CAT1_PWRKEY_Pin CAT1_PWREN_Pin */
+  GPIO_InitStruct.Pin = CAT1_PWRKEY_Pin|CAT1_PWREN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(CAT1_PWREN_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : FAN_PWREN_Pin */
   GPIO_InitStruct.Pin = FAN_PWREN_Pin;
