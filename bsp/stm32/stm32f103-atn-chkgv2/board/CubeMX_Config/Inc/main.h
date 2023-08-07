@@ -80,6 +80,14 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LEDM1_Pin GPIO_PIN_0
+#define LEDM1_GPIO_Port GPIOC
+#define LEDM2_Pin GPIO_PIN_1
+#define LEDM2_GPIO_Port GPIOC
+#define LEDM3_Pin GPIO_PIN_2
+#define LEDM3_GPIO_Port GPIOC
+#define LEDTB_EN_Pin GPIO_PIN_1
+#define LEDTB_EN_GPIO_Port GPIOA
 #define SPI1_CS_Pin GPIO_PIN_4
 #define SPI1_CS_GPIO_Port GPIOA
 #define CAT1_PWRKEY_Pin GPIO_PIN_7

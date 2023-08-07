@@ -11,6 +11,7 @@ src = Split('''
 board.c
 CubeMX_Config/Src/stm32f1xx_hal_msp.c
 src/usr_init.c
+src/usr_led.c
 ''')
 
 if GetDepend(['BSP_USING_ETH']):

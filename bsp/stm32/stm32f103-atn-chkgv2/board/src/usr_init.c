@@ -12,6 +12,7 @@
 #include <dfs_fs.h>
 #include <easyflash.h>
 
+#include "usr_led.h"
 
 static void test_env(void)
 {
@@ -79,6 +80,7 @@ void usr_mnt_init(void)
 
 void usr_init(void)
 {
+    usr_led_init();
     fal_init();
     usr_mnt_init();
     easyflash_init();
