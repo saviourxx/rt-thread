@@ -30,6 +30,9 @@ if GetDepend(['BSP_USING_AT_CAT1']):
     if GetDepend(['AT_DEVICE_USING_EC200X']):
         src += Glob('ports/at_sample_ec200x.c')
 
+if GetDepend(['PKG_USING_DLT645']):
+    src += Glob('ports/dlt645_rs485_port.c')
+
 path =  [cwd]
 path += [cwd + '/CubeMX_Config/Inc']
 path += [cwd + '/ports']

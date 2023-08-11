@@ -15,11 +15,6 @@ menu "Onboard Peripheral Drivers"
         select BSP_USING_UART1
         default y
 
-    config BSP_USING_RS485_OR_RS232
-        bool "Enable RS485/RS232 (uart2 be shared)"
-        select BSP_USING_UART2
-        default n
-
     menuconfig BSP_USING_AT_CAT1
         bool "Enable AT component for cat1 (uart3)"
         default n
@@ -54,6 +49,13 @@ menu "Onboard Peripheral Drivers"
                 range -1 175
                 default -1
         endif
+
+    config BSP_USING_RS485_DLT645
+        bool "Enable RS485 and DLT645 (uart5)"
+        default n
+        select BSP_USING_UART
+        select BSP_USING_UART5
+        select PKG_USING_DLT645
 
     config BSP_USING_SPI_FLASH
         bool "Enable SPI FLASH (W25Q16 spi1)"
@@ -172,6 +174,14 @@ menu "On-chip Peripheral Drivers"
             config BSP_UART3_RX_USING_DMA
                 bool "Enable UART3 RX DMA"
                 depends on BSP_USING_UART3 && RT_SERIAL_USING_DMA
+                default n
+
+            config BSP_USING_UART4
+                bool "Enable UART4"
+                default n
+
+            config BSP_USING_UART5
+                bool "Enable UART5"
                 default n
         endif
 

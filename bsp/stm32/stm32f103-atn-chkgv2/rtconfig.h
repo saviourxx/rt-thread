@@ -182,6 +182,7 @@
 
 /* log format */
 
+#define ULOG_OUTPUT_FLOAT
 #define ULOG_USING_COLOR
 #define ULOG_OUTPUT_TIME
 #define ULOG_TIME_USING_TIMESTAMP
@@ -217,6 +218,17 @@
 #define OTA_DOWNLOADER_DEBUG
 #define PKG_USING_YMODEM_OTA
 #define PKG_USING_OTA_DOWNLOADER_LATEST_VERSION
+#define PKG_USING_DLT645
+#define PKG_USING_DLT645_LATEST_VERSION
+
+/* dlt645 Options */
+
+#define DLT645_USING_RS485
+#define DLT645_SERIAL_NAME "uart5"
+#define DLT645_SERIAL_BAUDRATE 2400
+#define DLT645_SERIAL_PARITY 2
+#define DLT645_RS485_DE_PIN 8
+#define DLT645_RS485_TX_LVL 1
 
 /* security packages */
 
@@ -259,6 +271,8 @@
 
 /* enhanced kernel services */
 
+#define PKG_USING_RT_VSNPRINTF_FULL
+#define PKG_USING_RT_VSNPRINTF_FULL_LATEST_VERSION
 
 /* acceleration: Assembly language or algorithmic acceleration packages */
 
@@ -279,6 +293,14 @@
 
 /* Kendryte SDK */
 
+#define PKG_USING_RS485
+#define RS485_USING_SAMPLE_MASTER
+#define RS485_SAMPLE_MASTER_SERIAL "uart5"
+#define RS485_SAMPLE_MASTER_BAUDRATE 2400
+#define RS485_SAMPLE_MASTER_PARITY 1
+#define RS485_SAMPLE_MASTER_PIN 8
+#define RS485_SAMPLE_MASTER_LVL 1
+#define PKG_USING_RS485_LATEST_VERSION
 
 /* AI packages */
 
@@ -348,6 +370,7 @@
 #define EC200X_RECV_BUFF_LEN 512
 #define EC200X_PWREN_PIN 40
 #define EC200X_PWRKEY_PIN 39
+#define BSP_USING_RS485_DLT645
 #define BSP_USING_SPI_FLASH
 #define BSP_USING_FAN
 
@@ -357,6 +380,7 @@
 #define BSP_USING_UART
 #define BSP_USING_UART1
 #define BSP_USING_UART3
+#define BSP_USING_UART5
 #define BSP_USING_ON_CHIP_FLASH
 #define BSP_USING_SPI
 #define BSP_USING_SPI1
